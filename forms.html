@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        form {
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            /* margin: auto; */
+            width: 50%;
+            background-image: linear-gradient(aqua, teal);
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: Arial,
+            Helvetica,
+            sans-serif;
+            font-weight: bold;
+        }
+
+        form:hover {
+            box-shadow: 0 0 10px 10px grey;
+        }
+
+        label {
+            display: inline-block;
+            width: 25%;
+            font-size: 15px;
+            vertical-align: top;
+        }
+
+        input[type="text"],
+        [type="date"],
+        input[type="number"],
+        select,
+        textarea,
+        input[type="email"],
+        input[type="password"],
+        .gender-div {
+            width: 50%;
+            font-size: 15px;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+        }
+
+        .gender-div {
+            display: inline;
+            justify-content: space-between;
+        }
+        .gender label{
+            display: inline-flex;
+        }
+        .button-div{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+        button,input[type="submit"],input[type="reset"]{
+            background-color: lightpink;
+            color: black;
+            padding: 5px 15px;
+            font-size: 15px;
+            border: 0;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        button:hover ,input[type="submit"]:hover ,input[type="reset"]:hover{ 
+            font-weight: bold;
+            box-shadow: 0 0 10px 10px grey;
+        }
+        input:active{
+            background-color: grey;
+        }
+        input:focus{
+            background-color: red;
+        }
+        p{
+            background-size: cover;
+            background-image: url('327085299_1314107239439117_1431157327860671084_n.jpg');
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 150px;
+            font-weight: bold;
+            font-family: Jokerman;
+        }
+
+        @media screen and (max-width:1140px) {
+           
+            form{
+                width: 90%;
+            }
+            label{
+                width: 100%;
+                display: block;
+                font-size: 16px;
+            }
+            input[type="text"],
+            [type="date"],
+            input[type="number"],
+            select,textarea,
+            input[type="email"],
+            input[type="password"],
+            .gender-div {
+                width: 100%;
+            }
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter your First Name" size="40" value="Ribaj" disabled>
+        <br><br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname">
+        <br><br>
+        <label for="age">Age</label>
+        <input type="number" id="age" max="99" min="1">
+        <br><br>
+        <label for="email">E-mail</label>
+        <input type="email" id="email">
+        <br><br>
+        <label for="pass">Password</label>
+        <input type="password" id="pass">
+        <br><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" if="dob" value="2000-01-01">
+        <br><br>
+        <label for="add">Address</label>
+        <select name="Address" id="add">
+            <option value="KTM">Kathmandu</option>
+            <option value="BKT">Bhaktapur</option>
+            <option value="PKR">Pokhara</option>
+        </select>
+        <br><br>
+        <label>Gender</label>
+        <div class="gender">
+            <div class="gender-div">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+            </div>
+            <div class="gender-div">
+                <input type="radio" id="female" name="gender" value="female" checked>
+                <label for="female">Female</label>
+            </div>
+        </div>
+
+
+        <br><br>
+        <label for="des">Description</label>
+        <textarea name="Description" id="des" cols="30" rows="10" maxlength="30" required></textarea>
+        <br><br>
+        <label for="hob">Hobbies</label>
+        <div class="gender">
+            <div class="gender-div"><input type="checkbox" name="Hobby" value="read" id="hob">
+                <label for="hob">Reading</label>
+            </div>
+
+            <div class="gender-div"><input type="checkbox" name="Hobby" id="gaming" value="gaming">
+                <label for="gaming">Games</label>
+            </div>
+            <div class="gender-div"><input type="checkbox" name="Hobby" value="anime" id="anime">
+                <label for="anime">Watching Anime</label>
+            </div>
+
+        </div>
+        <br><br>
+        <div class="button-div">
+            <button>Register</button>
+            <input type="submit">
+            <input type="reset">
+        </div>
+        
+
+    </form>
+    <p>Hello World</p>
+</body>
+
+</html>
